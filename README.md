@@ -1,4 +1,4 @@
-# 💰 Expenses Tracker Web Application
+<h1 align="center">Expenses Tracker Web Application</h1>
 
 ## 📌 Project Overview
 The **Expenses Tracker Web Application** helps users manage their daily income and expenses in a simple and organized way. Users can add transactions, monitor spending habits, and view a clear financial summary through an interactive dashboard.
@@ -62,6 +62,18 @@ expense_tracker/
 │   ├── style.css
 │   └── script.js
 </pre>
+
+---
+## 🚀 Deployment
+
+This project is deployed using **Render**.
+
+---
+
+### 🔗 Live Demo
+
+https://expense-tracker-seoj.onrender.com/
+
 
 ---
 
