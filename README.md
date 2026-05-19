@@ -102,3 +102,9 @@ SQLite stores all transaction data such as income, expenses, categories, and tim
 
 ## 📌 Conclusion
 This project is a simple yet powerful full-stack web application built using Flask and SQLite. It helps users track their income and expenses efficiently and gain better control over their finances.
+
+---
+
+## 🤝 Collaborators
+- Kavy Mehta  
+- Krishna Belwal
