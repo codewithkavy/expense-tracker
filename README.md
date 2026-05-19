@@ -15,7 +15,7 @@ The **Expenses Tracker Web Application** helps users manage their daily income a
 
 ## 📸 Project Preview
 
-![Front Page](Screenshot_Page.png)
+![Front Page](Screenshot.png)
 
 ---
 
