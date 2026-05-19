@@ -85,7 +85,7 @@ Users interact with the application through simple forms to add income and expen
 ### 🧠 Backend
 Flask processes requests, performs calculations, retrieves stored data, and updates the dashboard dynamically.
 
-### 🗄️ Database (SQLite)
+### 🗄️ Database
 SQLite stores all transaction data such as income, expenses, categories, and timestamps in a lightweight database.
 
 ---
