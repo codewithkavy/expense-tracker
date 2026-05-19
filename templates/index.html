@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<canvas id="expenseChart"></canvas>
+
+<script>
+    const income = {{ income }};
+    const expense = {{ expense }};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<footer>
+    Developed by Kavy Mehta 🚀
+</footer>
+<body>
+
+<div class="container">
+
+    <div class="navbar">
+
+    <h1>💰 Expense Tracker</h1>
+
+    <p>Manage Your Money Smartly</p>
+
+</div>
+
+    <div class="card">
+        <h2>Current Balance</h2>
+        <h1>₹ {{ balance }}</h1>
+    </div>
+
+    <div class="summary">
+
+        <div class="income-box">
+            <h3>Income</h3>
+            <p>₹ {{ income }}</p>
+        </div>
+
+        <div class="expense-box">
+            <h3>Expense</h3>
+            <p>₹ {{ expense }}</p>
+        </div>
+
+    </div>
+
+    <form class="form-section" action="/add" method="POST">
+
+        <input 
+            type="text" 
+            name="title" 
+            placeholder="Enter Title" 
+            required
+        >
+
+        <input 
+            type="number" 
+            name="amount" 
+            placeholder="Enter Amount" 
+            required
+        >
+
+        <select name="type">
+
+            <option>Income</option>
+            <option>Expense</option>
+
+        </select>
+
+        <button type="submit">
+            Add Transaction
+        </button>
+
+    </form>
+
+    <div class="transactions">
+
+        <h2>Transaction History</h2>
+
+        {% for transaction in transactions %}
+
+        <div class="transaction">
+
+            <div>
+                <p>{{ transaction[1] }}</p>
+                <small>{{ transaction[3] }}</small>
+            </div>
+
+            <div class="right-side">
+
+                <span>
+                    ₹ {{ transaction[2] }}
+                </span>
+
+                <a href="/delete/{{ transaction[0] }}">
+                    ❌
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
